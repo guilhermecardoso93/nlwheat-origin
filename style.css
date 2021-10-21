@@ -14,6 +14,21 @@ body {
 body {
   display: grid;
   place-items: center;
+  margin-top: 3rem;
+  background-image: linear-gradient(20deg, #09090a, #ff008e, #ff7a29, #ffcd1e);
+  background-size: 200% 200%;
+  animation: colors 13s ease infinite;
+}
+@keyframes colors {
+  0% {
+    background-position: 0% 55%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 main {
@@ -41,6 +56,17 @@ main {
   position: absolute;
   top: -20px;
   z-index: 1;
+
+  animation: is-rotating 20s linear infinite;
+}
+
+@keyframes is-rotating {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .avatar > img {
